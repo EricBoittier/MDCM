@@ -1,7 +1,9 @@
 %chk=methanol_opt.chk
-%nproc=4
+%nproc=8
 %mem=500MB
-#p wB97XD/6-31G** opt freq=NoRaman dft-d3=bj
+#p B2PLYPD3/6-31G** opt freq=NoRaman 
+
+methanol_opt
 
 0 1
 C         -5.17997       -1.25368        0.93059

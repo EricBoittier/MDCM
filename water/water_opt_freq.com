@@ -1,7 +1,9 @@
 %chk=water_opt.chk
-%nproc=4
+%nproc=8
 %mem=500MB
-#p wB97XD/6-31G** opt freq=NoRaman dft-d3=bj
+#p B2PLYPD3/6-31G** opt freq=NoRaman 
+
+water_opt
 
 0 1
 O         -5.31717       -0.75103        0.91861

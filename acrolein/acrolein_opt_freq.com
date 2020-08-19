@@ -1,7 +1,9 @@
 %chk=acrolein_opt.chk
-%nproc=4
+%nproc=8
 %mem=500MB
-#p wB97XD/6-31G** opt freq=NoRaman dft-d3=bj
+#p B2PLYPD3/6-31G** opt freq=NoRaman 
+
+acrolein_opt
 
 0 1
 C         -5.01401       -1.36892        0.89287

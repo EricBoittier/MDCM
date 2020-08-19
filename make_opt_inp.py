@@ -1,9 +1,11 @@
 import os
 
 file_template = """%chk={0}.chk
-%nproc=4
+%nproc=8
 %mem={1}MB
-#p wB97XD/6-31G** opt freq=NoRaman dft-d3=bj
+#p B2PLYPD3/6-31G** opt freq=NoRaman 
+
+{0}
 
 0 1
 {2}

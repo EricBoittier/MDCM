@@ -1,7 +1,9 @@
 %chk=butadiene_opt.chk
-%nproc=4
+%nproc=8
 %mem=500MB
-#p wB97XD/6-31G** opt freq=NoRaman dft-d3=bj
+#p B2PLYPD3/6-31G** opt freq=NoRaman 
+
+butadiene_opt
 
 0 1
 C         -3.82991        0.22932        0.01807

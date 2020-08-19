@@ -1,19 +1,18 @@
 #!/bin/bash
 
-#SBATCH --job-name=water_opt_freq
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
-#SBATCH --mem-per-cpu=137
+#$ -e /home/boittier/MDCM/water
+#$ -o /home/boittier/MDCM/water
+#$ -N water_opt_freq
+#$ -p 0
+#$ -pe smp 8
 # 
 #$ -S /bin/bash
+echo "running on "`hostname`
 source /opt/cluster/programs/g09/g09_d.01/g09/bsd/g09.login.bash
-hostname
 #source /opt/Modules/etc/profile.modules
 
  
 #set -xv
-echo water_opt_freq >> /home/$USER/ttjobs
 mkdir -p /scratch/$USER/water_opt_freq
 export GAUSS_SCRDIR=/scratch/$USER/water_opt_freq
 
