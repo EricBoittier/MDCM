@@ -1,3 +1,3 @@
 # MDCM
 
-![formula](<img src="https://render.githubusercontent.com/render/math?math=e^{i %2B\pi}=x%2B1">)
+![formula](https://render.githubusercontent.com/render/math?math=A,%20B%20\in%20\U,%20x%20\in%20\Z)
