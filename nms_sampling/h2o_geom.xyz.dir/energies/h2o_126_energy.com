@@ -1,0 +1,11 @@
+%chk=/home/boittier/MDCM/nms_sampling/h2o_geom.xyz.dir/h2o_126.chk
+%nproc=8
+%mem=16000MB
+#p B2PLYPD3/Def2QZVP 
+
+h2o
+
+0 1
+O  -5.326605  -0.764873   0.922477
+H  -4.368927  -0.727784   0.906998
+H  -5.609308   0.149802   0.739443
