@@ -53,7 +53,7 @@ def make(name):
 
         f = open(path + "/energies/{}_{}_energy.com".format(name, i), "w")
         f.write(file_template.format("/home/boittier/MDCM" +
-                                     path.split("MDCM")[-1] + "/{}_{}".format(name, i), 16000, name, s)[:-1])
+                                     path.split("MDCM")[-1] + "/{}_{}".format(name, i), 16000, name, s))
         f.close()
 
 make("acrolein")
