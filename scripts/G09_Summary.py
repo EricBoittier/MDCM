@@ -104,8 +104,14 @@ class G09_Summary:
         self.output_summary = self.output_summary.split("\\")
         self.output_summary = [i.replace(" ", "") for i in self.output_summary if i]
 
-        self.job_name = self.output_summary[2]
-        c_m = self.output_summary[3]
+        if "" in self.output_summary:
+            self.output_summary.remove("")
+
+        while self.output_summary[0][0] != "#":
+            self.output_summary.pop(0)
+
+        self.job_name = self.output_summary[1]
+        c_m = self.output_summary[2]
         self.charge = int(c_m.split(",")[0])
         self.multiplicity = int(c_m.split(",")[1])
 
@@ -113,7 +119,7 @@ class G09_Summary:
         Setting the XYZ coordinates
         """
         self.xyz = []
-        for line in self.output_summary[4:]:
+        for line in self.output_summary[3:]:
             if line.__contains__("Version"):
                 break
             self.xyz.append(line)
@@ -133,7 +139,10 @@ class G09_Summary:
         f_out.close()
 
 
-test = G09_Summary("butane_opt_freq.out")
-test.saveXYZ()
-test.saveVibrations()
-test.generateNMS_F90()
+systems = ["acrolein", "butane", "butadiene", "water", "methanol", "cyanomethane"]
+for system in systems:
+    path = "/home/boittier/Documents/MDCM/big_basis_set/{0}/{0}_opt_freq.out".format(system)
+    test = G09_Summary(path)
+    test.saveXYZ()
+#test.saveVibrations()
+# test.generateNMS_F90()
